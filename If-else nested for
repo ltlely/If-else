@@ -1,0 +1,50 @@
+/* Write an application that prompts a user for the number of years that user has until 
+retirement and the amount of money the user can save annually.  If the user enters a 0 or 
+negative number for either value, re-prompt the user until valid entries are made. Assume 
+that the user earns 5% interest on the balance every year. Display the amount of money the 
+user will have at retirement.
+1. Ask user number of years until retirement + amount of money can save annually
+2. save
+3. If user input 0/negative, repromt user until valid entries
+4. User earns 5% interest on balance EVERY year
+5. Display amount of money user have at retirement
+*/ 
+
+import java.util.Scanner;
+    public class Main {
+        public static void main (String []args) {
+            
+        double balance = 0;
+        
+            
+        System.out.println ("Please enter the number of years to determine the amount of money at retirement."); 
+        Scanner keyboard = new Scanner(System.in);
+        int numYears = keyboard.nextInt();
+        
+        System.out.println ("Enter annual salary.");
+        int annualSal = keyboard.nextInt();
+        
+        if (numYears <= 0 || annualSal <= 0) {
+            for (int i = 1;  ; i++ ) {
+                System.out.println ("Please try again");
+                System.out.println ("Please enter the number of years to determine the amount of money at retirement."); 
+                numYears = keyboard.nextInt();
+                System.out.println ("Enter annual salary.");
+                annualSal = keyboard.nextInt();
+                if (numYears > 0 && annualSal > 0) {
+                    break;
+                }
+                else {
+                    continue;
+                }
+            }
+        }
+        else {
+            for (int i = 0; i < numYears; i++) {
+                balance = annualSal + (balance * 0.05);
+            }
+        }
+        System.out.println ("The amount at retirement is: " + balance);    
+        } //end main
+    
+    }//end class
