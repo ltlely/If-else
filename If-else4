@@ -1,0 +1,40 @@
+/* Create a program that allows a student to calculate how much tuition they owe for one 
+semester at a community college. The student will be asked for the number of credits they are 
+taking this semester. The student will then be asked if they are an in-state student. In-state 
+students are charged $100.00 dollars per credit, but out-of-state students will be charged $200.00 per 
+credit. The program should end by displaying the number of credits the student is taking this semester, 
+whether they are an in-state student or an out-of-state student, the cost per credit, and the tuition the 
+student owes for this semester. */
+
+
+import java.util.Scanner;
+    public class Main {
+        public static void main (String []args) {
+            
+         System.out.println ("How many credits are you taking?");
+         Scanner scan = new Scanner(System.in);
+         int credits = scan.nextInt();
+ 
+         System.out.println ("Are you instate Y/N");
+         scan.nextLine(); //WHEN SCANNING FROM INT TO STRING MAKE AN EMPTY SCAN.NEXTLINE();
+         String response = scan.nextLine();
+         
+         if(response.equalsIgnoreCase("y")) //String.equalsIgnoreCsse(String2)//String.equals(String2)
+            {
+                System.out.println ("Your total is: " + credits*100);
+                System.out.println ("Instate student");
+                System.out.println ("The cost per credit:" + "$100");
+                System.out.println ("Number of credits: " + credits);
+            }
+            else if (response.equalsIgnoreCase("n")) {
+                System.out.println ("Your total is: " + credits*200);
+                System.out.println ("Out-of-state student");
+                System.out.println ("The cost per credit:" + "$200");
+                System.out.println ("Number of credits: " + credits);
+            }
+            else if (!response.equalsIgnoreCase("y") || !response.equalsIgnoreCase("n")) {
+                System.out.println ("error");
+            }
+        }
+        
+    }
