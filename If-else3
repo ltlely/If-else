@@ -1,0 +1,49 @@
+/* Create a program that will help someone get an estimate of how much they might owe in federal
+income taxes for the year. Allow the user to enter his or her income for the entire year. Based
+on their income the program should determine their tax rate as well as an estimate for how much
+they might owe. The tax rate and the amount of taxes they owe should be printed to the screen.
+Use the following tax brackets for the program:
+ 10% on taxable income from $0 to $10,000
+ 20% on taxable income over $10,000 to $50,000
+ 30% on taxable income over $50,000 to $100,000
+ 40% on taxable income over $100,000  
+1. create how much they owe in federal income taxes for a year
+2. allow user enter the income for entire year
+3. based on income, determine tax rate + estimate how much they owe*/
+
+import java.util.Scanner;
+    public class Main {
+        public static void main (String []args) {
+            
+         System.out.println ("Please enter your income for the year, your income will determine your tax rate and how much you owe.");
+         Scanner scan = new Scanner (System.in);
+         int income = scan.nextInt();
+         
+         if (income >= 0 || income <= 10000) {
+             
+             System.out.println ("Your tax rate is 10%");
+             System.out.println ("You owe " + income*.10);
+             
+         }
+         else if (income > 10000 || income <= 50000) {
+             
+             System.out.println ("Your tax rate is 20%");
+             System.out.println ("You owe " + income*.20);
+    
+         }
+         else if (income > 50000 || income <=100000) {
+             
+             System.out.println ("Your tax rate is 30%");
+             System.out.println ("You owe " + income*.30);
+             
+         }
+         else if (income > 100000) {
+             
+             System.out.println ("Your tax rate is 40%");
+             System.out.println ("You owe " + income*.40);
+             
+         }   
+            
+        }
+        
+    }
