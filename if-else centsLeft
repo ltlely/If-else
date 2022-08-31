@@ -1,0 +1,78 @@
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+     
+     /* Write a program with total change amount in pennies as an integer input, and output the 
+      change using the fewest coins, one coin type per line. The coin types are Dollars, Quarters, 
+      Dimes, Nickels, and Pennies. Use singular and plural coin names as appropriate, like 1 Penny vs. 
+      2 Pennies. */
+      
+      int cents;
+      int centsLeft;
+      
+      int dollars = 100;
+      int quarters = 25;
+      int dimes = 10;
+      int nickls = 5;
+      int pennies = 1;
+      
+      int numDollars;
+      int numQuarters;
+      int numDimes;
+      int numNickls;
+      int numPennies;
+      
+      Scanner keyboard = new Scanner(System.in);
+      cents = keyboard.nextInt();
+      
+      numDollars = cents/dollars;
+      centsLeft = cents % dollars;
+      
+      numQuarters = centsLeft/quarters;
+      centsLeft = centsLeft % quarters;
+      
+      numDimes = centsLeft/dimes;
+      centsLeft = centsLeft % dimes;
+      
+      numNickls = centsLeft/nickls;
+      centsLeft = centsLeft % nickls;
+
+      
+      if(numDollars==1) {
+      System.out.println(numDollars+" dollar");
+      }
+      else if (numDollars>0) {
+      System.out.println(numDollars+" dollars");
+      }
+      if (numQuarters==1) {
+      System.out.println(numQuarters+" quarter");
+      }
+      else if (numQuarters>0) {
+      System.out.println(numQuarters+" quarters");
+      }
+      if (numDimes==1) {
+      System.out.println(numDimes+" dime");
+      }
+      else if (numDimes>0) {
+      System.out.println(numDimes+" dimes");
+      }
+      if (numNickls==1) {
+      System.out.println(numNickls+" nickel");
+      }
+      else if (numNickls>0) {
+      System.out.println(numNickls+" nickels");
+      }
+      if (centsLeft==1) {
+      System.out.println(centsLeft+" penny");
+      }
+      else if (centsLeft>0) {
+      System.out.println(centsLeft+" pennies");
+      }
+      System.out.println("");
+     
+      
+      
+      
+   }
+}
