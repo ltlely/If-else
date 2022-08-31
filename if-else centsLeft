@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class LabProgram {
    public static void main(String[] args) {
-     
-     /* Write a program with total change amount in pennies as an integer input, and output the 
+      /* Write a program with total change amount in pennies as an integer input, and output the 
       change using the fewest coins, one coin type per line. The coin types are Dollars, Quarters, 
       Dimes, Nickels, and Pennies. Use singular and plural coin names as appropriate, like 1 Penny vs. 
       2 Pennies. */
@@ -38,41 +37,40 @@ public class LabProgram {
       numNickls = centsLeft/nickls;
       centsLeft = centsLeft % nickls;
 
-      
-      if(numDollars==1) {
-      System.out.println(numDollars+" dollar");
+      if (cents > 0) {
+         if(numDollars==1) {
+         System.out.println(numDollars+" Dollar");
+         }
+         else if (numDollars>0) {
+         System.out.println(numDollars+" Dollars");
+         }
+         if (numQuarters==1) {
+         System.out.println(numQuarters+" Quarter");
+         }
+         else if (numQuarters>0) {
+         System.out.println(numQuarters+" Quarters");
+         }
+         if (numDimes==1) {
+         System.out.println(numDimes+" Dime");
+         }
+         else if (numDimes>0) {
+         System.out.println(numDimes+" Dimes");
+         }
+         if (numNickls==1) {
+         System.out.println(numNickls+" Nickel");
+         }
+         else if (numNickls>0) {
+         System.out.println(numNickls+" Nickels");
+         }
+         if (centsLeft==1) {
+         System.out.println(centsLeft+" Penny");
+         }
+         else if (centsLeft>0) {
+         System.out.println(centsLeft+" Pennies");
+         }
       }
-      else if (numDollars>0) {
-      System.out.println(numDollars+" dollars");
+      else {
+      System.out.println ("No change");
       }
-      if (numQuarters==1) {
-      System.out.println(numQuarters+" quarter");
-      }
-      else if (numQuarters>0) {
-      System.out.println(numQuarters+" quarters");
-      }
-      if (numDimes==1) {
-      System.out.println(numDimes+" dime");
-      }
-      else if (numDimes>0) {
-      System.out.println(numDimes+" dimes");
-      }
-      if (numNickls==1) {
-      System.out.println(numNickls+" nickel");
-      }
-      else if (numNickls>0) {
-      System.out.println(numNickls+" nickels");
-      }
-      if (centsLeft==1) {
-      System.out.println(centsLeft+" penny");
-      }
-      else if (centsLeft>0) {
-      System.out.println(centsLeft+" pennies");
-      }
-      System.out.println("");
-     
-      
-      
-      
    }
 }
